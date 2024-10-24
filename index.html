@@ -11,12 +11,115 @@
 </head>
 
 <body>
-    <!-- Your code goes here -->
-    <div class="container">
-        <a href="https://github.com/mmdmrishabh/Coding-assessment-l2-Boilerplate-code/blob/main/Readme.md" target="_blank">Read how to work with boilerplate</a>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <img src="https://cdn.shopify.com/s/files/1/0883/2188/4479/files/Marmeto.png" alt="Marmeto Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="icon-btn"><i class="search-icon"></i></button>
+                    <button class="icon-btn"><i class="wishlist-icon"></i></button>
+                    <button class="icon-btn"><i class="cart-icon"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Cart</h1>
+            <div class="breadcrumb">
+                <a href="/">Home</a> / Cart
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-grid">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <span>Product</span>
+                        <span>Price</span>
+                        <span>Quantity</span>
+                        <span>Subtotal</span>
+                    </div>
+                    <div id="cartItemsList" class="cart-items-list">
+                        <!-- Items will be dynamically inserted here -->
+                        <div class="loader" id="loader">Loading...</div>
+                    </div>
+                </div>
+
+                <!-- Cart Totals -->
+                <div class="cart-totals">
+                    <h2>Cart Totals</h2>
+                    <div class="totals-content">
+                        <div class="totals-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹0.00</span>
+                        </div>
+                        <div class="totals-row">
+                            <span>Total</span>
+                            <span id="total">₹0.00</span>
+                        </div>
+                        <button class="checkout-btn">Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="trophy-icon"></i>
+                    <h3>High Quality</h3>
+                    <p>Crafted from top materials</p>
+                </div>
+                <div class="feature">
+                    <i class="warranty-icon"></i>
+                    <h3>Warranty Protection</h3>
+                    <p>Over 2 years</p>
+                </div>
+                <div class="feature">
+                    <i class="shipping-icon"></i>
+                    <h3>Free Shipping</h3>
+                    <p>Order over 150 $</p>
+                </div>
+                <div class="feature">
+                    <i class="support-icon"></i>
+                    <h3>24 / 7 Support</h3>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Remove Item Modal -->
+    <div id="removeModal" class="modal">
+        <div class="modal-content">
+            <h3>Remove Item</h3>
+            <p>Are you sure you want to remove this item from your cart?</p>
+            <div class="modal-buttons">
+                <button id="confirmRemove">Yes, Remove</button>
+                <button id="cancelRemove">Cancel</button>
+            </div>
+        </div>
     </div>
-    <!-- Happy coding 😊 -->
-    <script src="./script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
